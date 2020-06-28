@@ -133,7 +133,10 @@ app.get('/weather', (req, res) => {
 // corona route
 app.get('/corona',(req, res) => {
     // for dynamic pages we use render method
-    res.render('corona');
+    res.render('corona',{
+        title:'',
+        name:'Shivam Arora'
+    });
 });
 
 

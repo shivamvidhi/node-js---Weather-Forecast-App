@@ -135,3 +135,9 @@ h2 a {
     border: none;
     padding-left: 18px;
 }
+
+header a {
+  color: #888888;
+  margin-right: 16px;
+  text-decoration: none;
+}
