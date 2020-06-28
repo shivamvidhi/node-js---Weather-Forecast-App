@@ -9,6 +9,10 @@ const hbs = require('hbs');
 
 const app = express();
 
+
+// for heroku we need the post number because it doesnot run on port 3000
+const port = process.env.PORT || 3000;
+
 const publicDirPath = path.join(__dirname,'../public');
 const htmlDirPath = path.join(__dirname,'../public/html');
 
@@ -142,8 +146,8 @@ app.get('*',(req, res) => {
 });
 
 
-app.listen(3000, () => {
+app.listen(port, () => {
 
-console.log('server is up on port 3000');
+console.log('server is up on port '+port);
 
 });

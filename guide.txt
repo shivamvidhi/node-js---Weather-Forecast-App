@@ -16,3 +16,8 @@ To create a server:
 -> we can also change the name of "views" to some other name but the we need to provide express the path so that it can look for it
     to do so -> 1.  create the path 
                 2.  app.set('views', path)
+
+-> to run on heroku make following changes-
+    1. add "start":"node src/app.js" in package.json  to tell heroku how to run the app. because heroku use "npm run start".
+    2. change the port_number. Because heroku may run on any port_number. Do this by "const port_number = process.env.PORT;"
+    3. remove localhost if used anywhere.
