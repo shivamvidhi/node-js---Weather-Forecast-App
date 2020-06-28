@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<title>Cororna Tracker</title>
+		<link rel="stylesheet" href="../css/corona.css">
+	</head>
+	<body>
+		<h1><span class="blue">&lt;</span>CORONA<span class="blue">&gt;</span> <span class="yellow">TRACKER</pan></h1>
+		<br>
+		<br>
+
+		<div class = "updatedTime">
+				<h2 id = "updatedTime" style="color: #0C92C5  ">* Updated at </h2>
+		</div>
+
+		<h3 class="container2">Global Analyses</h3>
+
+		<table class="container" id="myTable2" style="td:first-child:{color:white};">
+			<thead>
+				<tr>
+					<th><h1>Total Confirmed</h1></th>
+					<th><h1>Recovered</h1></th>
+					<th><h1>Deaths</h1></th>
+					<th><h1>New Cases Confirmed</h1></th>
+					<th><h1>New Recovered</h1></th>
+					<th><h1>New Deaths</h1></th>
+				</tr>
+			</thead>
+		</table>
+
+
+
+		<div class="container2" id="searchBar">
+			<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for country..." title="Type in a name">
+  		</div>
+
+
+
+
+		<h3 class="container2">Country Wise Analyses</h3>
+
+
+
+		<table class="container" id="myTable">
+			<thead>
+				<tr>
+					<th><h1>Country</h1></th>
+					<th><h1>Total Confirmed</h1></th>
+					<th><h1>Still Infected</h1></th>
+					<th><h1>Recovered</h1></th>
+					<th><h1>Deaths</h1></th>
+					<th><h1>New Cases Confirmed</h1></th>
+					<th><h1>New Recovered</h1></th>
+					<th><h1>New Deaths</h1></th>
+				</tr>
+			</thead>
+		</table>
+
+	</body>
+	<script type="text/javascript" src="../js/corona.js">
+	</script>
+</html>

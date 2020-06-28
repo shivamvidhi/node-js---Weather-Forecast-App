@@ -1,0 +1,18 @@
+To create a server:
+1. install exppress
+2. express() -> creates the server.
+3. let app = express() 
+    app.get('',()=>{}) -> to create API.
+
+4. app.listen( port_number )
+
+-> to create path : 1. install "path" library
+                    2. const htmlDirPath = path.join(__dirname,'../public/html');
+-> to use dynamic views :
+                        1.  install "hbs"
+                        2.  app.set('view engine', 'hbs');
+                        3.  use response.render( view_name ) method to display the view.
+
+-> we can also change the name of "views" to some other name but the we need to provide express the path so that it can look for it
+    to do so -> 1.  create the path 
+                2.  app.set('views', path)
