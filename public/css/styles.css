@@ -49,3 +49,49 @@ button {
     color: white;
     padding: 8px;
 }
+
+
+.weather-banner{
+    background-color: rgba(0, 0, 0, 0.34);
+    flex-grow: 1;
+    padding: 0.2em;
+    margin: auto;
+    width: 60%;
+    background-image: url("../images/1.jpg");
+    
+    
+    
+}
+
+
+#banner-heading{
+    color: white;
+    margin: 10px;
+    font-size: 2em;
+    text-decoration: none;
+    text-align: center;
+    
+}
+#temperature{
+    color: rgba(255, 215, 1, 0.59);
+    text-align: center;
+    font-size: 5em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+
+}
+#location
+{
+    color: white;
+    text-align: center;
+    font-size: 2em;
+    padding-bottom:0.5em; 
+   
+
+}
+#weather-condition{
+    color: white;
+    text-align: center;
+    font-size: 1.5em;
+    padding-bottom:0.5em; 
+}
