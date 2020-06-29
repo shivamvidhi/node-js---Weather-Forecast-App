@@ -63,7 +63,7 @@ app.get('', (req, res) => {
     // for dynamic pages we use render method
     res.render('index', {
         title:'Weather app',
-        name: 'Shivam Arora'
+        name: 'Vidhi Tyagi'
     });
 
 });
@@ -78,7 +78,7 @@ app.get('/help', (req, res) => {
     // for dynamic pages we use render method
     res.render('help', {
         title:'Help',
-        name: 'Shivam Arora'
+        name: 'Vidhi Tyagi'
     });
 
 });
@@ -93,7 +93,7 @@ app.get('/about', (req, res) => {
     // for dynamic pages we use render method
     res.render('about', {
         title:'About',
-        name: 'Shivam Arora'
+        name: 'Vidhi Tyagi'
     });
 
 });
@@ -140,7 +140,7 @@ app.get('/corona',(req, res) => {
     // for dynamic pages we use render method
     res.render('corona',{
         title:'',
-        name:'Shivam Arora'
+        name:'Vidhi Tyagi'
     });
 });
 
@@ -179,7 +179,7 @@ app.get('/mail',(req, res)=>{
 app.get('*',(req, res) => {
     res.render('pageNotFound',{
         title:'404 Error',
-        name: 'Shivam Arora'
+        name: 'Vidhi Tyagi'
     });
 });
 
