@@ -3,6 +3,11 @@ const express = require('express');
 const geoCode = require('./utils/Geo-Code.js')
 const forecast = require('./utils/Weather-Forecast.js')
 
+//for sending mail
+var nodemailer = require('nodemailer');
+
+
+
 
 // to use partial templates eg. headers and footers in web pages. We need to require hbs.
 const hbs = require('hbs');
@@ -110,7 +115,7 @@ app.get('/weather', (req, res) => {
         forecast(cordinates.latitude,cordinates.longitude,(error, data)=>{   
         if(error)
             {
-                // console.log(cordinates.longitude,cordinates.latitude) -> They will go "undefined"
+                console.log(cordinates.longitude,cordinates.latitude) //-> They will go "undefined"
                 return res.send({error:'unable to find weather of the given location'})         
                     
             }
@@ -137,6 +142,41 @@ app.get('/corona',(req, res) => {
         title:'',
         name:'Shivam Arora'
     });
+});
+
+
+// sending email api
+app.get('/mail',(req, res)=>{
+
+    var transporter = nodemailer.createTransport({
+        service: 'gmail',
+        auth: {
+          user: 'feedbackweatherforecastapp@gmail.com',
+          pass: 'Feedback@123'
+        }
+      });
+    
+      var sender = req.query.from;
+      var textBody = req.query.text;
+
+      var mailOptions = {
+        from: sender,
+        to: 'feedbackweatherforecastapp@gmail.com',
+        subject: sender,
+        text: textBody
+      };
+      console.log(mailOptions);
+
+
+
+      transporter.sendMail(mailOptions, function(error, info){
+        if (error) {
+          console.log(error);
+        } else {
+          console.log('Email sent: ' + info.response);
+          res.send(info);
+        }
+      });
 });
 
 

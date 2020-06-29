@@ -16,7 +16,18 @@
             <h3>
                 Hello, How can I help You?
             </h3>
+            <div class="feedback">
+                <form>
+                    <input id="email" type="email" placeholder="Your email">
+                    <textarea id="feedback" rows="4" cols="50" placeholder="Feedback"></textarea>
+                    <button id="send">Send</button>
+                    <p id="loading"></p>
+                </form>
+                
+            </div>
         </div>
+        
         {{>footer}}
+        <script src="../js/emailAPI.js"></script>
     </body>
 </html>

@@ -30,6 +30,7 @@ weatherForm.addEventListener('submit',(event)=>{
             response.json().then((data)=>{
                 if(data.error)
                 {
+                    console.log(data.error);
                     console.log('Unable to find weather of given address. Try another search');
                     weatherInfo = 'Unable to find weather of given address. Try another search';
                     messageOne.textContent = weatherInfo;

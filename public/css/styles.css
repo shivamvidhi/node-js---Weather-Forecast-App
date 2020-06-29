@@ -41,6 +41,10 @@ input {
     border: 1px solid #cccccc;
     padding: 8px;
 }
+textarea {
+    border: 1px solid #cccccc;
+    padding: 8px;
+}
 
 button {
     cursor: pointer;
@@ -94,4 +98,19 @@ button {
     text-align: center;
     font-size: 1.5em;
     padding-bottom:0.5em; 
+}
+.feedback{
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+}
+
+#email, #feedback{
+    margin-top: 4%;
+    width : 100%;
+    
+}
+#send{
+    margin-top: 4%;
+    align-self: center;
 }
